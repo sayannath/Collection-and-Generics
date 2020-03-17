@@ -6,7 +6,7 @@ public class programOne {
         int n = 5;
         ArrayList<Integer> arrayList = new ArrayList<>(n);
 
-        for (int i=1; i <= n;i++)
+        for (int i=0; i <= n;i++)
             arrayList.add(i);
 
         for (int i =0; i<n;i++)
