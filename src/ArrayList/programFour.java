@@ -1,4 +1,4 @@
-// Implementing different methods of arrayList
+package ArrayList;// Implementing different methods of arrayList
 
 import java.io.*;
 import java.util.*;

@@ -1,6 +1,8 @@
-import Pair.Pair;
+package ArrayList;
 
-import java.io.*;
+import ArrayList.Pair.Pair;
+
+import java.io.IOException;
 public class programThree {
     public static void main(String args[])throws IOException {
         Pair<String, Integer> p1 = new Pair("Sayan", 235);

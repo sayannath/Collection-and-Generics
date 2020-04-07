@@ -1,4 +1,4 @@
-package Pair;
+package ArrayList.Pair;
 
 public class Pair<X, Y> {
     X x;
