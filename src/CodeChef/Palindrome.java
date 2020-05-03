@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class Palindrome {
-    public static void main(String args[])throws IOException {
+    public static void main(String[] args)throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Palindrome check = new Palindrome();
         //System.out.print("Enter the number of test cases :: ");
@@ -17,8 +17,7 @@ public class Palindrome {
             arrayList.add(x);
             t--;
         }
-        for (int i=0; i<arrayList.size(); i++)
-            System.out.println(arrayList.get(i));
+        for (Integer integer : arrayList) System.out.println(integer);
     }
     int reverse(int x){
         int d,rev=0;
