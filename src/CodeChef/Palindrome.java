@@ -21,10 +21,9 @@ public class Palindrome {
     }
     int reverse(int x){
         int d,rev=0;
-        int copy = x;
-        while (copy!=0) {
-            d = copy%10;
-            copy = copy/10;
+        while (x!=0) {
+            d = x%10;
+            x = x/10;
             rev = rev*10 + d;
         }
         return rev;
