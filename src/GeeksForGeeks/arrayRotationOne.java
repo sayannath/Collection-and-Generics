@@ -23,18 +23,18 @@ public class arrayRotationOne {
             return gcd(b, a % b);
     }
 
-    void rotation(int[] arr, int d, int x) {
-        d = d % x;
+    void rotation(int[] arr, int d, int n) {
+        d = d % n;
         int i, j, k, temp;
-        int g_c_d = gcd(d, x);
+        int g_c_d = gcd(d, n);
         for (i = 0; i < g_c_d; i++) {
             /* move i-th values of blocks */
             temp = arr[i];
             j = i;
             while (true) {
                 k = j + d;
-                if (k >= x)
-                    k = k - x;
+                if (k >= n)
+                    k = k - n;
                 if (k == i)
                     break;
                 arr[j] = arr[k];
@@ -43,7 +43,7 @@ public class arrayRotationOne {
             arr[j] = temp;
         }
         System.out.println("OUTPUT is");
-        for (int a = 0; a < x; a++)
+        for (int a = 0; a < n; a++)
             System.out.print(arr[a] + " ");
     }
 }
