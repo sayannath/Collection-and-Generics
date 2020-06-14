@@ -5,45 +5,34 @@ import java.io.*;
 public class arrayRotationOne {
     public static void main(String args[])throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("Enter the number of elements :: ");
-        int n = Integer.parseInt(br.readLine());
-        int[] A = new int[n];
-        System.out.print("Enter the elements :: ");
-        for(int i=0;i<n;i++){
-            A[i] = Integer.parseInt(br.readLine());
+        System.out.print("Enter the number of test-cases :: ");
+        int t = Integer.parseInt(br.readLine());
+        while(t!=0){
+            System.out.print("Enter the number of elements :: ");
+            int n = Integer.parseInt(br.readLine());
+            System.out.print("Enter the elements ::");
+            int[] arr = new int[n];
+            for(int i=0; i<n;i++)
+                arr[i] = Integer.parseInt(br.readLine());
+            System.out.print("Enter the number of rotations you want :: ");
+            int d = Integer.parseInt(br.readLine());
+            arrayRotationOne obj = new arrayRotationOne();
+            obj.rotateByOne(arr, d, n);
+            t--;
         }
-        arrayRotationOne obj = new arrayRotationOne();
-        obj.rotation(A, 2, n);
     }
 
-    int gcd(int a, int b) {
-        if (b == 0)
-            return a;
-        else
-            return gcd(b, a % b);
-    }
-
-    void rotation(int[] arr, int d, int n) {
-        d = d % n;
-        int i, j, k, temp;
-        int g_c_d = gcd(d, n);
-        for (i = 0; i < g_c_d; i++) {
-            /* move i-th values of blocks */
-            temp = arr[i];
-            j = i;
-            while (true) {
-                k = j + d;
-                if (k >= n)
-                    k = k - n;
-                if (k == i)
-                    break;
-                arr[j] = arr[k];
-                j = k;
+    void rotateByOne(int a[], int d, int n) {
+        for (int x = 0; x < d; x++) {
+            int i, temp;
+            temp = a[0];
+            for (i = 0; i < n - 1; i++) {
+                a[i] = a[i + 1];
             }
-            arr[j] = temp;
+            a[i] = temp;
         }
-        System.out.println("OUTPUT is");
-        for (int a = 0; a < n; a++)
-            System.out.print(arr[a] + " ");
+        System.out.println("Modified Array is :: ");
+        for (int i=0; i<n; i++)
+            System.out.print(a[i]+" ");
     }
 }
