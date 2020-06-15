@@ -21,9 +21,9 @@ public class programFour {
         y.add(90);
         y.add(100);
 
-        System.out.println("Printing Array List X");
+        System.out.println("Printing Array.questionTwo.Array List X");
         System.out.println(x);
-        System.out.println("Printing Array List Y");
+        System.out.println("Printing Array.questionTwo.Array List Y");
         System.out.println(y);
 
         System.out.println("Append two Collections");

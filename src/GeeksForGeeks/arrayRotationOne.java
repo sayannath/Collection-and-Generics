@@ -31,7 +31,7 @@ public class arrayRotationOne {
             }
             a[i] = temp;
         }
-        System.out.println("Modified Array is :: ");
+        System.out.println("Modified Array.questionTwo.Array is :: ");
         for (int i=0; i<n; i++)
             System.out.print(a[i]+" ");
     }
