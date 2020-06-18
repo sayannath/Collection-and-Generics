@@ -8,23 +8,20 @@ public class questionFive {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] a = {1,2,3,4,5};
-        int[] b = {2,3,7,8,9,10,5};
-        int i=0, j=0;
+        int[] b = {2,3,6,78,9};
+        int[] c = new int[b.length];
+        int x=0;
         int m = a.length;
         int n = b.length;
-        while(i<m && j<n){
-
-            if(a[i] > b[j]) {
-                j++;
+        for(int i=0; i<m; i++) {
+            for(int j=0; j<n; j++) {
+                if(a[i] == b[j])
+                    c[x++] = a[i];
             }
-            else if(a[i] < b[j]){
-                i++;
-            }
-            else {
-                System.out.println(a[i]);
-                i++;
-                j++;
-            }
+        }
+        for (int i =0; i<c.length; i++) {
+            if (c[i] != 0)
+                System.out.print(c[i] + " ");
         }
     }
 }
